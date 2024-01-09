@@ -71,10 +71,7 @@ namespace Coherence.Generated
 		private SerializeEntityID entityId;
 		private Logger logger = Log.GetLogger<CoherenceSyncCube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357>();
 
-		// Cached targets for commands		
-		private global::Cube Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29_CommandTarget;		
-		private global::Cube Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443_CommandTarget;		
-		private global::Cube Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf_CommandTarget;
+		// Cached targets for commands
 		private InputBuffer<Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Input> inputBuffer;
 		private Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Input currentInput;
 		private long lastAddedFrame = -1;
@@ -94,9 +91,6 @@ namespace Coherence.Generated
 
 		public CoherenceSyncCube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357()
 		{
-			bakedCommandBindings.Add("b40a91d1-bb2d-47e0-a792-5a2a43c88d29", BakeCommandBinding_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29);
-			bakedCommandBindings.Add("dc24ef4f-c4f8-4a19-9aa4-12ba9c996443", BakeCommandBinding_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443);
-			bakedCommandBindings.Add("d059d81d-990f-4266-9b43-28fdc813abbf", BakeCommandBinding_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf);
 		}
 
 		public override Binding BakeValueBinding(Binding valueBinding)
@@ -116,24 +110,6 @@ namespace Coherence.Generated
 			{
 				commandBindingBaker.Invoke(commandBinding, commandsHandler);
 			}
-		}
-		private void BakeCommandBinding_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29(CommandBinding commandBinding, CommandsHandler commandsHandler)
-		{
-			Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29_CommandTarget = (global::Cube)commandBinding.UnityComponent;
-			commandsHandler.AddBakedCommand("Cube.NonHover", "()",
-				SendCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29, ReceiveLocalCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29, MessageTarget.All, Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29_CommandTarget,false);
-		}
-		private void BakeCommandBinding_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443(CommandBinding commandBinding, CommandsHandler commandsHandler)
-		{
-			Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443_CommandTarget = (global::Cube)commandBinding.UnityComponent;
-			commandsHandler.AddBakedCommand("Cube.OnHit", "()",
-				SendCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443, ReceiveLocalCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443, MessageTarget.All, Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443_CommandTarget,false);
-		}
-		private void BakeCommandBinding_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf(CommandBinding commandBinding, CommandsHandler commandsHandler)
-		{
-			Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf_CommandTarget = (global::Cube)commandBinding.UnityComponent;
-			commandsHandler.AddBakedCommand("Cube.OnHover", "()",
-				SendCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf, ReceiveLocalCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf, MessageTarget.All, Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf_CommandTarget,false);
 		}
 
 		public override List<ICoherenceComponentData> CreateEntity(bool usesLodsAtRuntime, string archetypeName)
@@ -201,71 +177,11 @@ namespace Coherence.Generated
 				bridge.OnLateFixedNetworkUpdate += SendInputState;
 			}
 		}
-		void SendCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29(MessageTarget target, object[] args)
-		{
-			var command = new Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29();
-			client.SendCommand(command, target, entityId);
-		}
-
-		void ReceiveLocalCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29(MessageTarget target, object[] args)
-		{
-			var command = new Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29();
-			ReceiveCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29(command);
-		}
-
-		void ReceiveCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29(Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29 command)
-		{
-			var target = Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29_CommandTarget;
-			target.NonHover();
-		}
-		void SendCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443(MessageTarget target, object[] args)
-		{
-			var command = new Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443();
-			client.SendCommand(command, target, entityId);
-		}
-
-		void ReceiveLocalCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443(MessageTarget target, object[] args)
-		{
-			var command = new Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443();
-			ReceiveCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443(command);
-		}
-
-		void ReceiveCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443(Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443 command)
-		{
-			var target = Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443_CommandTarget;
-			target.OnHit();
-		}
-		void SendCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf(MessageTarget target, object[] args)
-		{
-			var command = new Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf();
-			client.SendCommand(command, target, entityId);
-		}
-
-		void ReceiveLocalCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf(MessageTarget target, object[] args)
-		{
-			var command = new Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf();
-			ReceiveCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf(command);
-		}
-
-		void ReceiveCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf(Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf command)
-		{
-			var target = Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf_CommandTarget;
-			target.OnHover();
-		}
 
 		public override void ReceiveCommand(IEntityCommand command)
 		{
 			switch(command)
 			{
-				case Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29 castedCommand:
-					ReceiveCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_NonHover_b40a91d1_bb2d_47e0_a792_5a2a43c88d29(castedCommand);
-					break;
-				case Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443 castedCommand:
-					ReceiveCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443(castedCommand);
-					break;
-				case Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf castedCommand:
-					ReceiveCommand_Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf(castedCommand);
-					break;
 				default:
 					logger.Warning($"[CoherenceSyncCube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357] Unhandled command: {command.GetType()}.");
 					break;

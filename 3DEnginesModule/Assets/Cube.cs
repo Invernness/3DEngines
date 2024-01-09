@@ -6,6 +6,7 @@ using Coherence.Toolkit;
 public class Cube : MonoBehaviour
 {
 
+    [SerializeField] GameObject TowerObj;
 
     public Material red;
     public Material white;
@@ -45,6 +46,17 @@ public class Cube : MonoBehaviour
         if (!isClicked)
         {
             GetComponent<MeshRenderer>().material = white;
+        }
+    }
+    
+    public void SpawnTower()
+    {
+        
+        if (isClicked)
+        {
+            print("Tower Spawned");
+            GameObject Tower = Instantiate(TowerObj, gameObject.transform.position, gameObject.transform.rotation);
+            isClicked = false;
         }
     }
     

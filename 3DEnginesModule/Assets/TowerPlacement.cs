@@ -11,7 +11,7 @@ public class TowerPlacement : MonoBehaviour
 
     public int playerID = 0;
 
-
+    [SerializeField] GameObject[] Cubes;
 
 
     // Start is called before the first frame update
@@ -19,6 +19,8 @@ public class TowerPlacement : MonoBehaviour
     {
         Bridge = GameObject.FindGameObjectWithTag("Bridge").GetComponent<CoherenceBridge>();
         Bridge.ClientConnections.OnCreated += ClientConnections_OnCreated;
+
+        Cubes = GameObject.FindGameObjectsWithTag("Cube");
     }
 
     private void ClientConnections_OnCreated(CoherenceClientConnection obj)
@@ -30,21 +32,38 @@ public class TowerPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerID == 1)
+        //if(playerID == 1)
+        //{
+        //    if (Input.GetMouseButtonDown(0))
+        //    {
+        //        //Instantiate Cylinder Ontop of Cube Clicked
+        //        for (int i = 0; i < Cubes.Length; i++)
+        //        {
+        //            Cubes[i].GetComponent<Cube>().SpawnTower();
+        //        }
+                
+        //    }
+        //}
+        //if (playerID == 2)
+        //{
+        //    if (Input.GetMouseButtonDown(1))
+        //    {
+        //        //Instantiate Cube at Pathway Entrances
+        //    }
+        //}
+        
+        
+        //Instantiate Cylinder Ontop of Cube Clicked
+        for (int i = 0; i < Cubes.Length; i++)
         {
-            if (Input.GetMouseButtonDown(0))
+            Cubes[i].GetComponent<Cube>().SpawnTower();
+            if(i >= Cubes.Length)
             {
-                //Instantiate Cylinder Ontop of Cube Clicked
+                i = 0;
             }
         }
-        if (playerID == 2)
-        {
-            if (Input.GetMouseButtonDown(1))
-            {
-                //Instantiate Cube at Pathway Entrances
-            }
-        }
-
+        
+        
     }
 
 

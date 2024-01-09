@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8778517528857015093}
   m_Layer: 0
   m_Name: Cube (78)
-  m_TagString: Untagged
+  m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e739e4cc181b34397b44fb636dfb11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TowerObj: {fileID: 6199627597604161844, guid: b1dec7e1c83a434489ac8e1360b2aa8e, type: 3}
   red: {fileID: 2100000, guid: 5bad111a6cd1d884e848a912ee16d859, type: 2}
   white: {fileID: 2100000, guid: 505fdc8f0905b3c4a9e55184ee22ff6d, type: 2}
   blue: {fileID: 2100000, guid: 59ea70d6e3d24294aa62c8eefc27652c, type: 2}
@@ -203,6 +204,7 @@ MonoBehaviour:
   - rid: 389459463440433154
   - rid: 389459463440433399
   - rid: 389459463440433401
+  - rid: 6092921901812285904
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -325,6 +327,45 @@ MonoBehaviour:
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
         name: NonHover
+        monoAssemblyType: 
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 0
+        valueSyncCallbackName: 
+        memberType: 8
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Cube, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 6092921901812285904
+      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 6092921901812285905
+        routing: 1
+        isPredicted: 0
+        defaultInterpolationPath: 
+        guid: 025eb746-02fa-496a-9d87-57fb8e5d101d
+        archetypeData:
+          type: 0
+          minRange: 0
+          maxRange: 0
+          sampleRate: 0
+          floatCompression: 0
+          fields: []
+        unityComponent: {fileID: 2173718135782374700}
+        coherenceSync: {fileID: 2484046659081947832}
+        interpolationSettings: {fileID: 0}
+    - rid: 6092921901812285905
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: SpawnTower
         monoAssemblyType: 
         required: 0
         enforcesLODingWhenFieldsOverriden: 0

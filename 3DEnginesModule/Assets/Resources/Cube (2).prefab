@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8515199757802340705}
   - component: {fileID: 6122455829242246990}
   - component: {fileID: 7039913671831555953}
-  - component: {fileID: 1468053919058213888}
   - component: {fileID: 1419134199421687305}
   - component: {fileID: 9047188957383808097}
   - component: {fileID: 3001319786274245714}
@@ -87,21 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1468053919058213888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3648663282928059535}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e739e4cc181b34397b44fb636dfb11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  red: {fileID: 2100000, guid: 5bad111a6cd1d884e848a912ee16d859, type: 2}
-  white: {fileID: 2100000, guid: 505fdc8f0905b3c4a9e55184ee22ff6d, type: 2}
-  blue: {fileID: 2100000, guid: 59ea70d6e3d24294aa62c8eefc27652c, type: 2}
 --- !u!65 &1419134199421687305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -167,8 +151,6 @@ MonoBehaviour:
       lodStepsActive: 1
     - component: {fileID: 1419134199421687305}
       lodStepsActive: 1
-    - component: {fileID: 1468053919058213888}
-      lodStepsActive: 1
     lodLevels:
     - distance: 0
     archetypeName: Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357
@@ -200,9 +182,6 @@ MonoBehaviour:
   preserveChildren: 0
   bindings:
   - rid: 9182552702997495822
-  - rid: 389459463440433154
-  - rid: 389459463440433399
-  - rid: 389459463440433401
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -224,123 +203,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 389459463440433154
-      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        descriptor:
-          rid: 389459463440433155
-        routing: 1
-        isPredicted: 0
-        defaultInterpolationPath: 
-        guid: dc24ef4f-c4f8-4a19-9aa4-12ba9c996443
-        archetypeData:
-          type: 0
-          minRange: 0
-          maxRange: 0
-          sampleRate: 0
-          floatCompression: 0
-          fields: []
-        unityComponent: {fileID: 1468053919058213888}
-        coherenceSync: {fileID: 9047188957383808097}
-        interpolationSettings: {fileID: 0}
-    - rid: 389459463440433155
-      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        name: OnHit
-        monoAssemblyType: 
-        required: 0
-        enforcesLODingWhenFieldsOverriden: 0
-        valueSyncCallbackName: 
-        memberType: 8
-        parameterAssemblyTypes: []
-        ownerType:
-          assemblyQualifiedName: Cube, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-        CustomData:
-          rid: -2
-        bindingType:
-          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        oldName: 
-        oldParameterAssemblyTypes: []
-    - rid: 389459463440433399
-      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        descriptor:
-          rid: 389459463440433400
-        routing: 1
-        isPredicted: 0
-        defaultInterpolationPath: 
-        guid: d059d81d-990f-4266-9b43-28fdc813abbf
-        archetypeData:
-          type: 0
-          minRange: 0
-          maxRange: 0
-          sampleRate: 0
-          floatCompression: 0
-          fields: []
-        unityComponent: {fileID: 1468053919058213888}
-        coherenceSync: {fileID: 9047188957383808097}
-        interpolationSettings: {fileID: 0}
-    - rid: 389459463440433400
-      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        name: OnHover
-        monoAssemblyType: 
-        required: 0
-        enforcesLODingWhenFieldsOverriden: 0
-        valueSyncCallbackName: 
-        memberType: 8
-        parameterAssemblyTypes: []
-        ownerType:
-          assemblyQualifiedName: Cube, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-        CustomData:
-          rid: -2
-        bindingType:
-          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        oldName: 
-        oldParameterAssemblyTypes: []
-    - rid: 389459463440433401
-      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        descriptor:
-          rid: 389459463440433402
-        routing: 1
-        isPredicted: 0
-        defaultInterpolationPath: 
-        guid: b40a91d1-bb2d-47e0-a792-5a2a43c88d29
-        archetypeData:
-          type: 0
-          minRange: 0
-          maxRange: 0
-          sampleRate: 0
-          floatCompression: 0
-          fields: []
-        unityComponent: {fileID: 1468053919058213888}
-        coherenceSync: {fileID: 9047188957383808097}
-        interpolationSettings: {fileID: 0}
-    - rid: 389459463440433402
-      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        name: NonHover
-        monoAssemblyType: 
-        required: 0
-        enforcesLODingWhenFieldsOverriden: 0
-        valueSyncCallbackName: 
-        memberType: 8
-        parameterAssemblyTypes: []
-        ownerType:
-          assemblyQualifiedName: Cube, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-        CustomData:
-          rid: -2
-        bindingType:
-          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        oldName: 
-        oldParameterAssemblyTypes: []
     - rid: 9182552702997495822
       type: {class: PositionBinding, ns: Coherence.Toolkit.Bindings.TransformBindings, asm: Coherence.Toolkit}
       data:

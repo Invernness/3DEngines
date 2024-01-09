@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bridge: {fileID: 0}
   playerID: 0
+  Cubes: []
 --- !u!114 &7730007804745881035
 MonoBehaviour:
   m_ObjectHideFlags: 0
