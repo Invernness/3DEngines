@@ -5,48 +5,46 @@ using UnityEngine;
 
 public class TowerPlacement : MonoBehaviour
 {
-
-    [SerializeField] Material white;
-    [SerializeField] Material red;
-
-
     [SerializeField] CoherenceBridge Bridge;
 
     bool isConnected = false;
 
+    public int playerID = 0;
+
+
+
+
     // Start is called before the first frame update
     void Awake()
     {
+        Bridge = GameObject.FindGameObjectWithTag("Bridge").GetComponent<CoherenceBridge>();
         Bridge.ClientConnections.OnCreated += ClientConnections_OnCreated;
     }
 
     private void ClientConnections_OnCreated(CoherenceClientConnection obj)
     {
         isConnected = true;
+        playerID = playerID + 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
-        
-        if (Input.GetMouseButtonDown(0) && isConnected)
+        if(playerID == 1)
         {
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit hit;
-            Physics.Raycast(mousePos, Camera.main.transform.forward, out hit, Mathf.Infinity);
-
-
-
-            hit.collider.gameObject.GetComponent<CoherenceSync>().SendCommand<Cube>("OnHit", Coherence.MessageTarget.All);
-
-         //   hit.collider.gameObject.GetComponent<Cube>().OnHit();
-
-               
+            if (Input.GetMouseButtonDown(0))
+            {
+                //Instantiate Cylinder Ontop of Cube Clicked
+            }
         }
-        
+        if (playerID == 2)
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                //Instantiate Cube at Pathway Entrances
+            }
+        }
 
-        */
     }
 
 
