@@ -25,24 +25,29 @@ public class Cube : MonoBehaviour
             GetComponent<MeshRenderer>().material = white;
             isClicked = false;
         }
-        
-        
-        
+
+
+
 
     }
 
     public void OnHover()
     {
-        if (GetComponent<MeshRenderer>().material != red)
+        if (gameObject.GetComponent<MeshRenderer>().material != red)
         {
             GetComponent<MeshRenderer>().material = blue;
         }
+
+
     }
     public void NonHover()
     {
-        
+        if (!isClicked)
+        {
+            GetComponent<MeshRenderer>().material = white;
+        }
     }
-
+    
 
     public void OnMouseDown()
     {
