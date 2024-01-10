@@ -10,9 +10,21 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, 0, 0), speed * Time.deltaTime);
+
+
+
+
     }
 
+    private void OnTriggerEnter(Collider collision)
+    {
+        if(collision.gameObject.tag == "Base")
+        {
+            Destroy(gameObject);
+        }
 
+
+    }
 
 
 

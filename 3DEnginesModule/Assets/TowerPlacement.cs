@@ -78,11 +78,11 @@ public class TowerPlacement : MonoBehaviour
             {
                 if(players[i].GetComponent<TowerPlacement>().playerID != playerID)
                 {
-                    players[i].gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                    //players[i].gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 }
             }
 
-            gameObject.transform.GetChild(0).GetComponent<Camera>().cullingMask = lM;
+            //gameObject.transform.GetChild(0).GetComponent<Camera>().cullingMask = lM;
 
 
         }
