@@ -19,6 +19,8 @@ public class TowerPlacement : MonoBehaviour
 
     [SerializeField] GameObject canvas;
 
+    [SerializeField] GameObject[] players;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -29,6 +31,8 @@ public class TowerPlacement : MonoBehaviour
         Cubes = GameObject.FindGameObjectsWithTag("Cube");
 
         upSpawn = GameObject.FindGameObjectWithTag("Up").transform;
+        canvas = GameObject.FindGameObjectWithTag("Canvas");
+
 
     }
 
@@ -65,7 +69,18 @@ public class TowerPlacement : MonoBehaviour
 
         if(playerID == 2)
         {
-            canvas.SetActive(true);
+            canvas.transform.GetChild(0).gameObject.SetActive(true);
+
+            players = GameObject.FindGameObjectsWithTag("Player");
+
+            for (int i = 0; i < players.Length; i++)
+            {
+                if(players[i].GetComponent<TowerPlacement>().playerID == 1)
+                {
+                    players[i].gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                }
+            }
+
         }
 
 
