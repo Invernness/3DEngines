@@ -16,7 +16,7 @@ namespace Coherence.Generated
 
 	public class Definition : IDefinition
 	{
-		public const string schemaId = "30fa9fa8b0d7c1cb18106966c9b1abba0ce1d192";
+		public const string schemaId = "e73aca9d64ccf5f9f29a50b7320b25fc3643fad1";
 		public const uint InternalWorldPosition = 0;
 		public const uint InternalWorldOrientation = 1;
 		public const uint InternalLocalUser = 2;
@@ -727,6 +727,7 @@ namespace Coherence.Generated
 		public const uint InternalCube__char_32___char_40_97__char_41__217432b53ddd8cb4090891e87f9d5c64_Input = 118;
 		public const uint InternalCube__char_32___char_40_98__char_41__de5eace782b819a4187367b25140757f_Input = 119;
 		public const uint InternalCube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Input = 120;
+		public const uint InternalPlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input = 121;
 
 		private static readonly Dictionary<uint, string> componentNamesForTypeIds = new Dictionary<uint, string>() {
 			{ 0, "WorldPosition" },
@@ -2510,6 +2511,8 @@ namespace Coherence.Generated
 					return Cube__char_32___char_40_98__char_41__de5eace782b819a4187367b25140757f_Input.Deserialize(bitStream);
 				case Definition.InternalCube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Input:
 					return Cube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Input.Deserialize(bitStream);
+				case Definition.InternalPlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input:
+					return PlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input.Deserialize(bitStream);
 				default:
 					break;
 			}
@@ -4392,6 +4395,9 @@ namespace Coherence.Generated
 					break;
 				case Definition.InternalCube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Input:
 					Cube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Input.Serialize((Cube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Input)inputData.Input, bitStream);
+					break;
+				case Definition.InternalPlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input:
+					PlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input.Serialize((PlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input)inputData.Input, bitStream);
 					break;
 				default:
 					break;
