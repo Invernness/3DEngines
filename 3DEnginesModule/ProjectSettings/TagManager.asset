@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bridge
   - Cube
+  - Up
   layers:
   - Default
   - TransparentFX

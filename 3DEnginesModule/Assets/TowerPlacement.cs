@@ -13,6 +13,12 @@ public class TowerPlacement : MonoBehaviour
 
     [SerializeField] GameObject[] Cubes;
 
+    [SerializeField] GameObject EnemyObj;
+
+    Transform upSpawn;
+
+    [SerializeField] GameObject canvas;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -21,6 +27,9 @@ public class TowerPlacement : MonoBehaviour
         Bridge.ClientConnections.OnCreated += ClientConnections_OnCreated;
 
         Cubes = GameObject.FindGameObjectsWithTag("Cube");
+
+        upSpawn = GameObject.FindGameObjectWithTag("Up").transform;
+
     }
 
     private void ClientConnections_OnCreated(CoherenceClientConnection obj)
@@ -32,7 +41,7 @@ public class TowerPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(playerID == 1)
+        //if (playerID == 1)
         //{
         //    if (Input.GetMouseButtonDown(0))
         //    {
@@ -41,29 +50,36 @@ public class TowerPlacement : MonoBehaviour
         //        {
         //            Cubes[i].GetComponent<Cube>().SpawnTower();
         //        }
-                
+
         //    }
         //}
-        //if (playerID == 2)
-        //{
-        //    if (Input.GetMouseButtonDown(1))
-        //    {
-        //        //Instantiate Cube at Pathway Entrances
-        //    }
-        //}
-        
-        
+        if (playerID == 1)
+        {
+            //if (Input.GetKeyDown(KeyCode.UpArrow))
+            //{
+            //    //Instantiate Cube at Pathway Entrances
+            //    GameObject Enemy = Instantiate(EnemyObj, upSpawn.transform.position, Quaternion.identity);
+            //}
+
+        }
+
+        if(playerID == 2)
+        {
+            canvas.SetActive(true);
+        }
+
+
         //Instantiate Cylinder Ontop of Cube Clicked
         for (int i = 0; i < Cubes.Length; i++)
         {
             Cubes[i].GetComponent<Cube>().SpawnTower();
-            if(i >= Cubes.Length)
+            if (i >= Cubes.Length)
             {
                 i = 0;
             }
         }
-        
-        
+
+
     }
 
 

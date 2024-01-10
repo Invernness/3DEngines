@@ -783,6 +783,35 @@ MonoBehaviour:
     - rid: 389459463440433322
       type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
       data: 
+--- !u!114 &-7078089321011919448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Enemy
+  m_EditorClassIdentifier: 
+  id: 13805883eac76884398e87131a7f0bcc
+  editorTarget: {fileID: 2129403027341218916, guid: 13805883eac76884398e87131a7f0bcc, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 6092921901812286094
+  objectInstantiator:
+    rid: 6092921901812286095
+  references:
+    version: 2
+    RefIds:
+    - rid: 6092921901812286094
+      type: {class: ResourcesProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        resourcesPath: Enemy
+    - rid: 6092921901812286095
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data: 
 --- !u!114 &-7009208232170926604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3528,6 +3557,7 @@ MonoBehaviour:
   - {fileID: -3422620366110546915}
   - {fileID: 8052811096659300466}
   - {fileID: -6068548508294281444}
+  - {fileID: -7078089321011919448}
   loadFromAssetDatabase: 0
 --- !u!114 &250619641548468677
 MonoBehaviour:
