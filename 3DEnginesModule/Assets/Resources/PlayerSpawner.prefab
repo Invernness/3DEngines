@@ -143,6 +143,10 @@ MonoBehaviour:
   Cubes: []
   EnemyObj: {fileID: 2129403027341218916, guid: 13805883eac76884398e87131a7f0bcc, type: 3}
   canvas: {fileID: 0}
+  players: []
+  lM:
+    serializedVersion: 2
+    m_Bits: 23
 --- !u!114 &7730007804745881035
 MonoBehaviour:
   m_ObjectHideFlags: 0

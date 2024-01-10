@@ -21,6 +21,7 @@ public class TowerPlacement : MonoBehaviour
 
     [SerializeField] GameObject[] players;
 
+    public LayerMask lM;
 
     // Start is called before the first frame update
     void Awake()
@@ -75,11 +76,14 @@ public class TowerPlacement : MonoBehaviour
 
             for (int i = 0; i < players.Length; i++)
             {
-                if(players[i].GetComponent<TowerPlacement>().playerID == 1)
+                if(players[i].GetComponent<TowerPlacement>().playerID != playerID)
                 {
                     players[i].gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 }
             }
+
+            gameObject.transform.GetChild(0).GetComponent<Camera>().cullingMask = lM;
+
 
         }
 

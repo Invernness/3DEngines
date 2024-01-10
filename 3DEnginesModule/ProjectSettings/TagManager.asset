@@ -8,6 +8,9 @@ TagManager:
   - Cube
   - Up
   - Canvas
+  - Down
+  - Right
+  - Left
   layers:
   - Default
   - TransparentFX
