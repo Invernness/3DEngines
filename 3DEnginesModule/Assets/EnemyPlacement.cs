@@ -17,9 +17,6 @@ public class EnemyPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sync.HasStateAuthority)
-        {
-            canvas.transform.GetChild(0).gameObject.SetActive(true);
-        }
+        
     }
 }

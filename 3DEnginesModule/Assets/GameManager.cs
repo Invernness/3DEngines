@@ -7,41 +7,41 @@ public class GameManager : MonoBehaviour
 {
 
     [SerializeField] CoherenceBridge Bridge;
-    [SerializeField] GameObject canvas;
+    GameObject player;
+    //[SerializeField] Transform[] uiLocations;
+
+    [SerializeField] List<float> rot;
 
     int playerPointer = 0;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         Bridge = GameObject.FindGameObjectWithTag("Bridge").GetComponent<CoherenceBridge>();
         Bridge.ClientConnections.OnCreated += ClientConnections_OnCreated;
-
-        canvas = GameObject.FindGameObjectWithTag("Canvas");
     }
 
     private void ClientConnections_OnCreated(CoherenceClientConnection obj)
     {
-        if(playerPointer == 1)//both player's connected
-        {
-            
-        }
+
         CoherenceClientConnection selectedConnection = Bridge.ClientConnections.Get(obj.ClientId);
 
-        GameObject player = selectedConnection.GameObject;
+        player = selectedConnection.GameObject;
 
         if(playerPointer == 0)
         {
-            player.GetComponent<EnemyPlacement>().enabled = true;
+            player.transform.GetChild(0).gameObject.SetActive(true);
         }
         if (playerPointer == 1)
         {
-            player.GetComponent<TowerPlacement>().enabled = true;
+            player.transform.GetChild(1).gameObject.SetActive(true);
         }
-        //canvas.transform.GetChild(playerPointer).gameObject.SetActive(true);
-
-
 
         playerPointer++;
     }
+
+
+
+
+
 }

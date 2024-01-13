@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    Transform upSpawn;
-    Transform downSpawn;
-    Transform leftSpawn;
-    Transform rightSpawn;
+    [SerializeField] Transform upSpawn;
+    [SerializeField] Transform downSpawn;
+    [SerializeField] Transform leftSpawn;
+    [SerializeField] Transform rightSpawn;
     [SerializeField] GameObject EnemyObj;
 
     // Start is called before the first frame update

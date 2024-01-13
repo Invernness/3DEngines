@@ -12,6 +12,7 @@ TagManager:
   - Right
   - Left
   - Base
+  - Spawner
   layers:
   - Default
   - TransparentFX
