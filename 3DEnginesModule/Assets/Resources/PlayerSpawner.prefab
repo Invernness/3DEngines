@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 542252569239383155}
   - component: {fileID: 6300073389621671388}
+  - component: {fileID: -1154490137187896988}
   - component: {fileID: 7730007804745881035}
   - component: {fileID: -8324647604110187328}
   m_Layer: 0
@@ -41,12 +42,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6248523497541935351}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e5ce79b675dd274f86a6e249981d575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Bridge: {fileID: 0}
+  sync: {fileID: 0}
   playerID: 0
   Cubes: []
   EnemyObj: {fileID: 2129403027341218916, guid: 13805883eac76884398e87131a7f0bcc, type: 3}
@@ -55,6 +57,20 @@ MonoBehaviour:
   lM:
     serializedVersion: 2
     m_Bits: 23
+--- !u!114 &-1154490137187896988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6248523497541935351}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e8d3149bd2a93249acc66026658047c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sync: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!114 &7730007804745881035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,12 +104,14 @@ MonoBehaviour:
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  coherenceSyncConfig: {fileID: -6068548508294281444, guid: f6b352c12cb7ab746b4f0a01bb6b24b5, type: 2}
+  coherenceSyncConfig: {fileID: 3560656307441501285, guid: f6b352c12cb7ab746b4f0a01bb6b24b5, type: 2}
   archetype:
     boundComponents:
     - component: {fileID: 542252569239383155}
       lodStepsActive: 1
     - component: {fileID: 6300073389621671388}
+      lodStepsActive: 1
+    - component: {fileID: -1154490137187896988}
       lodStepsActive: 1
     lodLevels:
     - distance: 0

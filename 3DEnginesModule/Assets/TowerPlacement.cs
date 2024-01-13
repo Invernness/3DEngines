@@ -7,6 +7,8 @@ public class TowerPlacement : MonoBehaviour
 {
     [SerializeField] CoherenceBridge Bridge;
 
+    [SerializeField] CoherenceSync sync;
+
     bool isConnected = false;
 
     public int playerID = 0;
@@ -26,9 +28,9 @@ public class TowerPlacement : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Bridge = GameObject.FindGameObjectWithTag("Bridge").GetComponent<CoherenceBridge>();
-        Bridge.ClientConnections.OnCreated += ClientConnections_OnCreated;
-
+        //Bridge = GameObject.FindGameObjectWithTag("Bridge").GetComponent<CoherenceBridge>();
+        //Bridge.ClientConnections.OnCreated += ClientConnections_OnCreated;
+        sync = this.gameObject.GetComponent<CoherenceSync>();
         Cubes = GameObject.FindGameObjectsWithTag("Cube");
 
         upSpawn = GameObject.FindGameObjectWithTag("Up").transform;
@@ -37,66 +39,51 @@ public class TowerPlacement : MonoBehaviour
 
     }
 
-    private void ClientConnections_OnCreated(CoherenceClientConnection obj)
-    {
-        isConnected = true;
-        playerID = playerID + 1;
-    }
+    //private void ClientConnections_OnCreated(CoherenceClientConnection obj)
+    //{
+    //    isConnected = true;
+    //    playerID = playerID + 1;
+    //}
 
     // Update is called once per frame
     void Update()
     {
-        //if (playerID == 1)
-        //{
-        //    if (Input.GetMouseButtonDown(0))
-        //    {
-        //        //Instantiate Cylinder Ontop of Cube Clicked
-        //        for (int i = 0; i < Cubes.Length; i++)
-        //        {
-        //            Cubes[i].GetComponent<Cube>().SpawnTower();
-        //        }
 
+
+        if (sync.HasStateAuthority)
+        {
+            
+            
+            //canvas.transform.GetChild(0).gameObject.SetActive(true);
+
+                //players = GameObject.FindGameObjectsWithTag("Player");
+
+                //for (int i = 0; i < players.Length; i++)
+                //{
+                //    if (players[i].GetComponent<TowerPlacement>().playerID != playerID)
+                //    {
+                //        //players[i].gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                //    }
+                //}
+
+
+
+
+            
+        }
+
+        
+
+
+
+        //for (int i = 0; i < Cubes.Length; i++)
+        //{
+        //    Cubes[i].GetComponent<Cube>().SpawnTower();
+        //    if (i >= Cubes.Length)
+        //    {
+        //        i = 0;
         //    }
         //}
-        if (playerID == 1)
-        {
-            //if (Input.GetKeyDown(KeyCode.UpArrow))
-            //{
-            //    //Instantiate Cube at Pathway Entrances
-            //    GameObject Enemy = Instantiate(EnemyObj, upSpawn.transform.position, Quaternion.identity);
-            //}
-
-        }
-
-        if(playerID == 2)
-        {
-            canvas.transform.GetChild(0).gameObject.SetActive(true);
-
-            players = GameObject.FindGameObjectsWithTag("Player");
-
-            for (int i = 0; i < players.Length; i++)
-            {
-                if(players[i].GetComponent<TowerPlacement>().playerID != playerID)
-                {
-                    //players[i].gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                }
-            }
-
-            //gameObject.transform.GetChild(0).GetComponent<Camera>().cullingMask = lM;
-
-
-        }
-
-
-        //Instantiate Cylinder Ontop of Cube Clicked
-        for (int i = 0; i < Cubes.Length; i++)
-        {
-            Cubes[i].GetComponent<Cube>().SpawnTower();
-            if (i >= Cubes.Length)
-            {
-                i = 0;
-            }
-        }
 
 
     }

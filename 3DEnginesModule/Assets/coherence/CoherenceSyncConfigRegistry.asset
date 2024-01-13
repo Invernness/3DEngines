@@ -1363,35 +1363,6 @@ MonoBehaviour:
     - rid: 389459464482455705
       type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
       data: 
---- !u!114 &-6068548508294281444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
-  m_Name: PlayerSpawner
-  m_EditorClassIdentifier: 
-  id: b7e2e07e36fde7340a26947bb8451106
-  editorTarget: {fileID: 6248523497541935351, guid: b7e2e07e36fde7340a26947bb8451106, type: 3}
-  includeInSchema: 1
-  objectProvider:
-    rid: 6092921901812285808
-  objectInstantiator:
-    rid: 6092921901812285809
-  references:
-    version: 2
-    RefIds:
-    - rid: 6092921901812285808
-      type: {class: ResourcesProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
-      data:
-        resourcesPath: PlayerSpawner
-    - rid: 6092921901812285809
-      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
-      data: 
 --- !u!114 &-6022408721566907615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3556,8 +3527,8 @@ MonoBehaviour:
   - {fileID: -5729136603801189262}
   - {fileID: -3422620366110546915}
   - {fileID: 8052811096659300466}
-  - {fileID: -6068548508294281444}
   - {fileID: -7078089321011919448}
+  - {fileID: 3560656307441501285}
   loadFromAssetDatabase: 0
 --- !u!114 &250619641548468677
 MonoBehaviour:
@@ -4572,6 +4543,35 @@ MonoBehaviour:
       data:
         resourcesPath: Cube (54)
     - rid: 389459463440433264
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data: 
+--- !u!114 &3560656307441501285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: PlayerSpawner
+  m_EditorClassIdentifier: 
+  id: b7e2e07e36fde7340a26947bb8451106
+  editorTarget: {fileID: 6248523497541935351, guid: b7e2e07e36fde7340a26947bb8451106, type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 6092921962715676678
+  objectInstantiator:
+    rid: 6092921962715676679
+  references:
+    version: 2
+    RefIds:
+    - rid: 6092921962715676678
+      type: {class: ResourcesProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        resourcesPath: PlayerSpawner
+    - rid: 6092921962715676679
       type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
       data: 
 --- !u!114 &3725800493388366236
