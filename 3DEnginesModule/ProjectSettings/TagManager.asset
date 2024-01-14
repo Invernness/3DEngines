@@ -13,6 +13,7 @@ TagManager:
   - Left
   - Base
   - Spawner
+  - Enemy
   layers:
   - Default
   - TransparentFX

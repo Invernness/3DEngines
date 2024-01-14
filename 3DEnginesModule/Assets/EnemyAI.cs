@@ -6,7 +6,9 @@ public class EnemyAI : MonoBehaviour
 {
     float speed = 1f;
 
-    [SerializeField] float damage;
+    float damage = 10;
+
+    public float Health;
 
     // Update is called once per frame
     void Update()
@@ -22,13 +24,25 @@ public class EnemyAI : MonoBehaviour
     {
         if(collision.gameObject.tag == "Base")
         {
+            print("hit base");
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
-            Destroy(gameObject);
+            Destroy(gameObject, 0.2f);
         }
 
 
     }
 
+
+    public void DamageEnemies(float dmg)
+    {
+        Health = Health - dmg;
+
+        if(Health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+
+    }
 
 
 }
