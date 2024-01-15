@@ -7,7 +7,7 @@ public class TowerPlacement : MonoBehaviour
 {
     [SerializeField] CoherenceBridge Bridge;
 
-    [SerializeField] CoherenceSync sync;
+    public CoherenceSync sync;
 
     bool isConnected = false;
 

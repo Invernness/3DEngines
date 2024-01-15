@@ -14,6 +14,7 @@ TagManager:
   - Base
   - Spawner
   - Enemy
+  - Dummy
   layers:
   - Default
   - TransparentFX

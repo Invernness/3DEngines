@@ -14,6 +14,26 @@ public class Cube : MonoBehaviour
 
     bool isClicked = false;
 
+    //[SerializeField] GameObject[] player;
+
+    //[SerializeField] TowerPlacement towerPlayer;
+
+    //private void Update()
+    //{
+    //    player = GameObject.FindGameObjectsWithTag("Player");
+
+    //    foreach (GameObject go in player)
+    //    {
+    //        if(go.GetComponentInChildren<TowerPlacement>() == enabled)
+    //        {
+    //            towerPlayer = go.GetComponentInChildren<TowerPlacement>();
+    //        }
+
+    //    }
+
+    //}
+
+
     public void OnHit()
     {
         if (GetComponent<MeshRenderer>().material != red)

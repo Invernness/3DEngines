@@ -39,7 +39,11 @@ public class EnemyAI : MonoBehaviour
 
         if(Health <= 0)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            transform.position = new Vector3(10000, 10000, 10000);
+            GetComponent<EnemyAI>().enabled = false;
+
+
         }
 
     }
