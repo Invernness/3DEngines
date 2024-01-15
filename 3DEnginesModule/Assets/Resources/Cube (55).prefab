@@ -191,8 +191,8 @@ MonoBehaviour:
   bakedScriptType: Coherence.Generated.CoherenceSyncCube__char_32___char_40_55__char_41__a55b3298c50828a4a88cd12bf0a09aed,
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
-  simulationType: 3
-  authorityTransferType: 2
+  simulationType: 0
+  authorityTransferType: 0
   orphanedBehavior: 0
   lifetimeType: 0
   uniquenessType: 1

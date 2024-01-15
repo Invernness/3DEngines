@@ -40,6 +40,8 @@ public class EnemyAI : MonoBehaviour
         if(Health <= 0)
         {
             //Destroy(this.gameObject);
+            GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
             transform.position = new Vector3(10000, 10000, 10000);
             GetComponent<EnemyAI>().enabled = false;
 

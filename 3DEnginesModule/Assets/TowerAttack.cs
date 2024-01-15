@@ -35,7 +35,6 @@ public class TowerAttack : MonoBehaviour
             HitEnemy();
             timer = 0;
         }
-        print(timer);
     }
 
     private void Start()
