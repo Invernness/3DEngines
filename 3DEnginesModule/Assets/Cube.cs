@@ -17,11 +17,17 @@ public class Cube : MonoBehaviour
     [SerializeField] GameObject[] player;
 
     [SerializeField] TowerPlacement towerPlayer;
+    [SerializeField] CurrencyManager currencyManagement;
+
+    private void Start()
+    {
+        currencyManagement = GameObject.FindGameObjectWithTag("Currency").GetComponent<CurrencyManager>();
+    }
 
     private void Update()
     {
         player = GameObject.FindGameObjectsWithTag("Player");
-
+        currencyManagement = GameObject.FindGameObjectWithTag("Currency").GetComponent<CurrencyManager>();
         foreach (GameObject go in player)
         {
             if (go.GetComponentInChildren<TowerPlacement>() == enabled)
@@ -72,10 +78,11 @@ public class Cube : MonoBehaviour
     public void SpawnTower()
     {
         
-        if (isClicked && towerPlayer.sync.HasStateAuthority)
+        if (isClicked && towerPlayer.sync.HasStateAuthority && currencyManagement.towerCredits >= 10)
         {
             print("Tower Spawned");
             GameObject Tower = Instantiate(TowerObj, gameObject.transform.position, gameObject.transform.rotation);
+            currencyManagement.Tower();
             isClicked = false;
         }
     }

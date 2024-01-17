@@ -8,9 +8,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] CoherenceBridge Bridge;
     GameObject player;
-    //[SerializeField] Transform[] uiLocations;
+    [SerializeField] GameObject currencyObject;
 
-    [SerializeField] List<float> rot;
 
     int playerPointer = 0;
 
@@ -35,6 +34,7 @@ public class GameManager : MonoBehaviour
         if (playerPointer == 1)
         {
             player.transform.GetChild(1).gameObject.SetActive(true);
+            currencyObject.GetComponent<CurrencyManager>().enabled = true;
         }
 
         playerPointer++;

@@ -15,6 +15,7 @@ TagManager:
   - Spawner
   - Enemy
   - Dummy
+  - Currency
   layers:
   - Default
   - TransparentFX

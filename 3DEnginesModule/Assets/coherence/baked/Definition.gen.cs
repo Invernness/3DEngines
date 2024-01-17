@@ -16,7 +16,7 @@ namespace Coherence.Generated
 
 	public class Definition : IDefinition
 	{
-		public const string schemaId = "14f17097ab70c8c003471f7e8d0e077daf036b16";
+		public const string schemaId = "f1afaa48629068dfd3a412cefdfa8b36e6482ec4";
 		public const uint InternalWorldPosition = 0;
 		public const uint InternalWorldOrientation = 1;
 		public const uint InternalLocalUser = 2;
@@ -121,6 +121,7 @@ namespace Coherence.Generated
 		public const uint InternalGenericFieldColor0 = 101;
 		public const uint InternalGenericFieldColor1 = 102;
 		public const uint InternalCube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Health_1468250657583452861 = 103;
+		public const uint InternalCurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_CurrencyManager_509801874849245739 = 104;
 		public const uint InternalAuthorityRequest = 0;
 		public const uint InternalAuthorityTransfer = 1;
 		public const uint InternalQuerySynced = 2;
@@ -729,7 +730,8 @@ namespace Coherence.Generated
 		public const uint InternalCube__char_32___char_40_97__char_41__217432b53ddd8cb4090891e87f9d5c64_Input = 118;
 		public const uint InternalCube__char_32___char_40_98__char_41__de5eace782b819a4187367b25140757f_Input = 119;
 		public const uint InternalCube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Input = 120;
-		public const uint InternalPlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input = 121;
+		public const uint InternalCurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_Input = 121;
+		public const uint InternalPlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input = 122;
 
 		private static readonly Dictionary<uint, string> componentNamesForTypeIds = new Dictionary<uint, string>() {
 			{ 0, "WorldPosition" },
@@ -836,6 +838,7 @@ namespace Coherence.Generated
 			{ 101, "GenericFieldColor0" },
 			{ 102, "GenericFieldColor1" },
 			{ 103, "Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Health_1468250657583452861" },
+			{ 104, "CurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_CurrencyManager_509801874849245739" },
 		};
 
 		public static string ComponentNameForTypeId(uint typeId)
@@ -1065,6 +1068,8 @@ namespace Coherence.Generated
 					return GenericFieldColor1.Deserialize(inProtocolStream);
 				case InternalCube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Health_1468250657583452861:
 					return Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Health_1468250657583452861.Deserialize(inProtocolStream);
+				case InternalCurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_CurrencyManager_509801874849245739:
+					return CurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_CurrencyManager_509801874849245739.Deserialize(inProtocolStream);
 				default:
 					return (null, 0);
 			}
@@ -1283,6 +1288,8 @@ namespace Coherence.Generated
 					return GenericFieldColor1.Serialize((GenericFieldColor1)data, mask, protocolStream);
 				case InternalCube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Health_1468250657583452861:
 					return Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Health_1468250657583452861.Serialize((Cube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357_Health_1468250657583452861)data, mask, protocolStream);
+				case InternalCurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_CurrencyManager_509801874849245739:
+					return CurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_CurrencyManager_509801874849245739.Serialize((CurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_CurrencyManager_509801874849245739)data, mask, protocolStream);
 				default:
 					logger.Error("Missing serialization implementation for a component.", ("component", data.GetComponentType()));
 					return 0;
@@ -2520,6 +2527,8 @@ namespace Coherence.Generated
 					return Cube__char_32___char_40_98__char_41__de5eace782b819a4187367b25140757f_Input.Deserialize(bitStream);
 				case Definition.InternalCube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Input:
 					return Cube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Input.Deserialize(bitStream);
+				case Definition.InternalCurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_Input:
+					return CurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_Input.Deserialize(bitStream);
 				case Definition.InternalPlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input:
 					return PlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input.Deserialize(bitStream);
 				default:
@@ -4407,6 +4416,9 @@ namespace Coherence.Generated
 					break;
 				case Definition.InternalCube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Input:
 					Cube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Input.Serialize((Cube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Input)inputData.Input, bitStream);
+					break;
+				case Definition.InternalCurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_Input:
+					CurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_Input.Serialize((CurrencyManager_48bcb4c0de4c0864e9e7802bb437dc7d_Input)inputData.Input, bitStream);
 					break;
 				case Definition.InternalPlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input:
 					PlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input.Serialize((PlayerSpawner_b7e2e07e36fde7340a26947bb8451106_Input)inputData.Input, bitStream);

@@ -10,6 +10,16 @@ public class EnemyAI : MonoBehaviour
 
     public float Health;
 
+    bool isDead = false;
+
+    [SerializeField] CurrencyManager currencyManagement;
+
+    private void Start()
+    {
+        currencyManagement = GameObject.FindGameObjectWithTag("Currency").GetComponent<CurrencyManager>();
+        currencyManagement.Enemy();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -37,15 +47,16 @@ public class EnemyAI : MonoBehaviour
     {
         Health = Health - dmg;
 
-        if(Health <= 0)
+        if(Health <= 0 && isDead == false)
         {
             //Destroy(this.gameObject);
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<BoxCollider>().enabled = false;
             transform.position = new Vector3(10000, 10000, 10000);
+            currencyManagement.EnemyDied();
+            isDead = true;
             GetComponent<EnemyAI>().enabled = false;
-
-
+            
         }
 
     }
