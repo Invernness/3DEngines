@@ -60,6 +60,12 @@ public class GameManager : MonoBehaviour
             GameOver();
         }
 
+        if(GameObject.FindGameObjectWithTag("Base").GetComponent<Health>().health <= 0)
+        {
+            GameOver();
+        }
+
+
     }
 
     void GameOver()
