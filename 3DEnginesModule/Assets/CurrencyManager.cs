@@ -21,7 +21,7 @@ public class CurrencyManager : MonoBehaviour
     {
         towerCredits = 10;
         enemyCredits = 20;
-        timer = 1;
+        timer = 0.2f;
         towerText = GameObject.FindGameObjectWithTag("Canvas").transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
         enemyText = GameObject.FindGameObjectWithTag("Canvas").transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
         Invoke("AddCredits", 1);
@@ -40,9 +40,9 @@ public class CurrencyManager : MonoBehaviour
         timer = timer - 0.0001f;
         
 
-        if(timer < 0.4f)
+        if(timer < 0.2f)
         {
-            timer = 0.4f;
+            timer = 0.2f;
         }
 
     }

@@ -71,7 +71,8 @@ namespace Coherence.Generated
 		private SerializeEntityID entityId;
 		private Logger logger = Log.GetLogger<CoherenceSyncEnemy_13805883eac76884398e87131a7f0bcc>();
 
-		// Cached targets for commands
+		// Cached targets for commands		
+		private global::EnemyAI Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09_CommandTarget;
 
 		private IClient client;
 		private CoherenceBridge bridge;
@@ -86,6 +87,7 @@ namespace Coherence.Generated
 
 		public CoherenceSyncEnemy_13805883eac76884398e87131a7f0bcc()
 		{
+			bakedCommandBindings.Add("1d968d1f-fbf3-4180-ab74-3bf8526f0c09", BakeCommandBinding_Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09);
 		}
 
 		public override Binding BakeValueBinding(Binding valueBinding)
@@ -105,6 +107,12 @@ namespace Coherence.Generated
 			{
 				commandBindingBaker.Invoke(commandBinding, commandsHandler);
 			}
+		}
+		private void BakeCommandBinding_Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09(CommandBinding commandBinding, CommandsHandler commandsHandler)
+		{
+			Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09_CommandTarget = (global::EnemyAI)commandBinding.UnityComponent;
+			commandsHandler.AddBakedCommand("EnemyAI.Move", "()",
+				SendCommand_Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09, ReceiveLocalCommand_Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09, MessageTarget.All, Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09_CommandTarget,false);
 		}
 
 		public override List<ICoherenceComponentData> CreateEntity(bool usesLodsAtRuntime, string archetypeName)
@@ -143,11 +151,31 @@ namespace Coherence.Generated
 			this.entityId = entityId;
 			this.client = client;
 		}
+		void SendCommand_Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09(MessageTarget target, object[] args)
+		{
+			var command = new Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09();
+			client.SendCommand(command, target, entityId);
+		}
+
+		void ReceiveLocalCommand_Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09(MessageTarget target, object[] args)
+		{
+			var command = new Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09();
+			ReceiveCommand_Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09(command);
+		}
+
+		void ReceiveCommand_Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09(Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09 command)
+		{
+			var target = Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09_CommandTarget;
+			target.Move();
+		}
 
 		public override void ReceiveCommand(IEntityCommand command)
 		{
 			switch(command)
 			{
+				case Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09 castedCommand:
+					ReceiveCommand_Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09(castedCommand);
+					break;
 				default:
 					logger.Warning($"[CoherenceSyncEnemy_13805883eac76884398e87131a7f0bcc] Unhandled command: {command.GetType()}.");
 					break;

@@ -16,7 +16,7 @@ namespace Coherence.Generated
 
 	public class Definition : IDefinition
 	{
-		public const string schemaId = "f1afaa48629068dfd3a412cefdfa8b36e6482ec4";
+		public const string schemaId = "3a083a28bf665db7b81fd1f87ccf7aef84d98df2";
 		public const uint InternalWorldPosition = 0;
 		public const uint InternalWorldOrientation = 1;
 		public const uint InternalLocalUser = 2;
@@ -609,6 +609,7 @@ namespace Coherence.Generated
 		public const uint InternalCube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Cube__char_46_OnHit_dc24ef4f_c4f8_4a19_9aa4_12ba9c996443 = 484;
 		public const uint InternalCube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf = 485;
 		public const uint InternalCube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Cube__char_46_SpawnTower_5399281e_b5e6_47b1_b271_34e773b4890b = 486;
+		public const uint InternalEnemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09 = 487;
 		public const uint InternalCube__char_32___char_40_10__char_41__98ba8590ba9a6224f887f021f2cd2f43_Input = 0;
 		public const uint InternalCube__char_32___char_40_100__char_41__dad5a18e3f4d28c4d86d385b82aaa23f_Input = 1;
 		public const uint InternalCube__char_32___char_40_101__char_41__7e11d667309ccf7439a9a6dd09116b9e_Input = 2;
@@ -2274,6 +2275,8 @@ namespace Coherence.Generated
 					return Cube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Cube__char_46_OnHover_d059d81d_990f_4266_9b43_28fdc813abbf.Deserialize(bitStream);
 				case Definition.InternalCube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Cube__char_46_SpawnTower_5399281e_b5e6_47b1_b271_34e773b4890b:
 					return Cube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Cube__char_46_SpawnTower_5399281e_b5e6_47b1_b271_34e773b4890b.Deserialize(bitStream);
+				case Definition.InternalEnemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09:
+					return Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09.Deserialize(bitStream);
 				default:
 					break;
 			}
@@ -4041,6 +4044,9 @@ namespace Coherence.Generated
 					break;
 				case Definition.InternalCube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Cube__char_46_SpawnTower_5399281e_b5e6_47b1_b271_34e773b4890b:
 					Cube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Cube__char_46_SpawnTower_5399281e_b5e6_47b1_b271_34e773b4890b.Serialize((Cube__char_32___char_40_99__char_41__1430ceb68c218ae40b54952c5358d862_Cube__char_46_SpawnTower_5399281e_b5e6_47b1_b271_34e773b4890b)data, bitStream);
+					break;
+				case Definition.InternalEnemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09:
+					Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09.Serialize((Enemy_13805883eac76884398e87131a7f0bcc_EnemyAI__char_46_Move_1d968d1f_fbf3_4180_ab74_3bf8526f0c09)data, bitStream);
 					break;
 				default:
 					break;

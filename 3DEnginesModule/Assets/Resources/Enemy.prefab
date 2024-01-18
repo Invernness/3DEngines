@@ -178,7 +178,7 @@ MonoBehaviour:
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
-  authorityTransferType: 0
+  authorityTransferType: 2
   orphanedBehavior: 0
   lifetimeType: 0
   uniquenessType: 0
@@ -187,6 +187,7 @@ MonoBehaviour:
   preserveChildren: 0
   bindings:
   - rid: 6092921901812286090
+  - rid: 6092922102737272840
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -251,6 +252,45 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+    - rid: 6092922102737272840
+      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 6092922102737272841
+        routing: 1
+        isPredicted: 0
+        defaultInterpolationPath: 
+        guid: 1d968d1f-fbf3-4180-ab74-3bf8526f0c09
+        archetypeData:
+          type: 0
+          minRange: 0
+          maxRange: 0
+          sampleRate: 0
+          floatCompression: 0
+          fields: []
+        unityComponent: {fileID: 2869451717526537521}
+        coherenceSync: {fileID: 8195615578269732211}
+        interpolationSettings: {fileID: 0}
+    - rid: 6092922102737272841
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: Move
+        monoAssemblyType: 
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 0
+        valueSyncCallbackName: 
+        memberType: 8
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: EnemyAI, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
 --- !u!114 &2869451717526537521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
+  sync: {fileID: 0}
+  currencyManagement: {fileID: 0}
 --- !u!54 &2710070707755655855
 Rigidbody:
   m_ObjectHideFlags: 0

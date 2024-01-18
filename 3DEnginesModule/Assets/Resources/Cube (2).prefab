@@ -175,8 +175,8 @@ MonoBehaviour:
   bakedScriptType: Coherence.Generated.CoherenceSyncCube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357,
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
-  simulationType: 3
-  authorityTransferType: 2
+  simulationType: 0
+  authorityTransferType: 0
   orphanedBehavior: 0
   lifetimeType: 0
   uniquenessType: 1
@@ -270,7 +270,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 1468250657583452861}
         coherenceSync: {fileID: 9047188957383808097}
-        interpolationSettings: {fileID: 0}
+        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5, type: 2}
     - rid: 6092922028752109589
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
