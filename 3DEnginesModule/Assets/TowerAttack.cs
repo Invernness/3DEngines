@@ -16,6 +16,9 @@ public class TowerAttack : MonoBehaviour
 
     float TowerDamage = 100f;
 
+    bool withinDistance = false;
+
+
     // Update is called once per frame
     void Update()
     {
@@ -35,6 +38,17 @@ public class TowerAttack : MonoBehaviour
             HitEnemy();
             timer = 0;
         }
+
+        if(Vector3.Distance(gameObject.transform.position, closestEnemy.transform.position) <= 4)
+        {
+            withinDistance = true;
+        }
+        else
+        {
+            withinDistance = false;
+        }
+        //print(Vector3.Distance(gameObject.transform.position, closestEnemy.transform.position));
+
     }
 
     private void Start()
@@ -55,7 +69,7 @@ public class TowerAttack : MonoBehaviour
 
         }
         
-        if(closestEnemy.GetComponent<EnemyAI>() != null)
+        if(closestEnemy.GetComponent<EnemyAI>() != null && withinDistance)
         {
             closestEnemy.GetComponent<EnemyAI>().DamageEnemies(TowerDamage);
             print("Enemy is Hit");
