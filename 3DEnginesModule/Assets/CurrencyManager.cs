@@ -29,7 +29,8 @@ public class CurrencyManager : MonoBehaviour
 
     void AddCredits()
     {
-        enemyCredits = enemyCredits + 1;
+        enemyCredits = enemyCredits + 2;
+        towerCredits = towerCredits + 1;
         Invoke("AddCredits", timer);
     }
 

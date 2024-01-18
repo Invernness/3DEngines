@@ -39,7 +39,7 @@ public class TowerAttack : MonoBehaviour
             timer = 0;
         }
 
-        if(Vector3.Distance(gameObject.transform.position, closestEnemy.transform.position) <= 4)
+        if(Vector3.Distance(gameObject.transform.position, closestEnemy.transform.position) <= 5.5)
         {
             withinDistance = true;
         }

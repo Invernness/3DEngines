@@ -175,8 +175,8 @@ MonoBehaviour:
   bakedScriptType: Coherence.Generated.CoherenceSyncCube__char_32___char_40_2__char_41__ba7dad75247fdbf4891b7ddbc7934357,
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
-  simulationType: 0
-  authorityTransferType: 0
+  simulationType: 3
+  authorityTransferType: 2
   orphanedBehavior: 0
   lifetimeType: 0
   uniquenessType: 1
@@ -185,8 +185,9 @@ MonoBehaviour:
   preserveChildren: 0
   bindings:
   - rid: 9182552702997495822
-  - rid: 6092922028752109586
   - rid: 6092922028752109588
+  - rid: 7585576218320437252
+  - rid: 7585576218320437254
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -208,46 +209,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 6092922028752109586
-      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        descriptor:
-          rid: 6092922028752109587
-        routing: 1
-        isPredicted: 0
-        defaultInterpolationPath: 
-        guid: fba1bdd2-68a0-43af-b2f4-3f89c88ceb4a
-        archetypeData:
-          type: 0
-          minRange: 0
-          maxRange: 0
-          sampleRate: 0
-          floatCompression: 0
-          fields: []
-        unityComponent: {fileID: 1468250657583452861}
-        coherenceSync: {fileID: 9047188957383808097}
-        interpolationSettings: {fileID: 0}
-    - rid: 6092922028752109587
-      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        name: TakeDamage
-        monoAssemblyType: 
-        required: 0
-        enforcesLODingWhenFieldsOverriden: 0
-        valueSyncCallbackName: 
-        memberType: 8
-        parameterAssemblyTypes:
-        - System.Single, mscorlib
-        ownerType:
-          assemblyQualifiedName: Health, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-            PublicKeyToken=null
-        CustomData:
-          rid: -2
-        bindingType:
-          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        oldName: 
-        oldParameterAssemblyTypes: []
     - rid: 6092922028752109588
       type: {class: FloatBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
       data:
@@ -289,6 +250,84 @@ MonoBehaviour:
         bindingType:
           assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.FloatBinding,
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 7585576218320437252
+      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 7585576218320437253
+        routing: 1
+        isPredicted: 0
+        defaultInterpolationPath: 
+        guid: cdfcde2c-5c27-4e11-9677-d1672d2f4d7f
+        archetypeData:
+          type: 0
+          minRange: 0
+          maxRange: 0
+          sampleRate: 0
+          floatCompression: 0
+          fields: []
+        unityComponent: {fileID: 1468250657583452861}
+        coherenceSync: {fileID: 9047188957383808097}
+        interpolationSettings: {fileID: 0}
+    - rid: 7585576218320437253
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: TakeDamage
+        monoAssemblyType: 
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 0
+        valueSyncCallbackName: 
+        memberType: 8
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Health, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 7585576218320437254
+      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 7585576218320437255
+        routing: 1
+        isPredicted: 0
+        defaultInterpolationPath: 
+        guid: 42a614e9-e40b-4ccd-b672-ab7f48f037a3
+        archetypeData:
+          type: 0
+          minRange: 0
+          maxRange: 0
+          sampleRate: 0
+          floatCompression: 0
+          fields: []
+        unityComponent: {fileID: 1468250657583452861}
+        coherenceSync: {fileID: 9047188957383808097}
+        interpolationSettings: {fileID: 0}
+    - rid: 7585576218320437255
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: Dmg
+        monoAssemblyType: 
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 0
+        valueSyncCallbackName: 
+        memberType: 8
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Health, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
     - rid: 9182552702997495822
@@ -365,3 +404,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  sync: {fileID: 0}

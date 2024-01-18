@@ -45,11 +45,11 @@ public class EnemyAI : MonoBehaviour
         if(collision.gameObject.tag == "Base")
         {
             print("hit base");
-            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+            collision.gameObject.GetComponent<Health>().TakeDamage();
             GetComponent<MeshRenderer>().enabled = false;
-            GetComponent<BoxCollider>().enabled = false;
-            transform.position = new Vector3(10000, 10000, 10000);
-            GetComponent<EnemyAI>().enabled = false;
+            //GetComponent<BoxCollider>().enabled = false;
+            //transform.position = new Vector3(10000, 10000, 10000);
+            //GetComponent<EnemyAI>().enabled = false;
         }
 
 

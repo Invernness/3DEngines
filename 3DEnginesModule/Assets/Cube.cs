@@ -42,37 +42,45 @@ public class Cube : MonoBehaviour
 
     public void OnHit()
     {
-        if (GetComponent<MeshRenderer>().material != red)
+        //if (GetComponent<MeshRenderer>().material != red)
+        //{
+        //    GetComponent<MeshRenderer>().material = red;
+        //    isClicked = true;
+        //}
+        //else
+        //{
+        //    GetComponent<MeshRenderer>().material = white;
+        //    isClicked = false;
+        //}
+
+        GetComponent<MeshRenderer>().material = red;
+        if (isClicked)
         {
-            GetComponent<MeshRenderer>().material = red;
-            isClicked = true;
+            isClicked = false;
         }
         else
         {
-            GetComponent<MeshRenderer>().material = white;
-            isClicked = false;
+            isClicked = true;
         }
-
-
-
 
     }
 
     public void OnHover()
     {
-        if (gameObject.GetComponent<MeshRenderer>().material != red)
-        {
-            GetComponent<MeshRenderer>().material = blue;
-        }
-
+        //if (gameObject.GetComponent<MeshRenderer>().material != red)
+        //{
+        //    GetComponent<MeshRenderer>().material = blue;
+        //}
+        GetComponent<MeshRenderer>().material = blue;
 
     }
     public void NonHover()
     {
-        if (!isClicked)
-        {
-            GetComponent<MeshRenderer>().material = white;
-        }
+        //if (!isClicked)
+        //{
+        //    GetComponent<MeshRenderer>().material = white;
+        //}
+        GetComponent<MeshRenderer>().material = white;
     }
     
     public void SpawnTower()
