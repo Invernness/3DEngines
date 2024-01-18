@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Coherence.Toolkit;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class GameManager : MonoBehaviour
     GameObject player;
     [SerializeField] GameObject currencyObject;
 
+    float Timer = 60f;
 
     int playerPointer = 0;
 
@@ -35,13 +38,33 @@ public class GameManager : MonoBehaviour
         {
             player.transform.GetChild(1).gameObject.SetActive(true);
             currencyObject.GetComponent<CurrencyManager>().enabled = true;
+            Invoke("UpdateTimer", 1);
         }
 
         playerPointer++;
     }
 
+    void UpdateTimer()
+    {
+        Timer = Timer - 1;
+        Invoke("UpdateTimer", 1);
+    }
 
+    private void Update()
+    {
+        GameObject.FindGameObjectWithTag("Canvas").transform.GetChild(3).gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = Timer.ToString();
 
+        if(Timer <= 0)
+        {
+            Timer = 0;
+            GameOver();
+        }
 
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
 }
